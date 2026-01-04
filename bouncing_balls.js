@@ -2,14 +2,15 @@ class Circle {
   constructor() {
     this.x = 200;
     this.y = 200;
-    this.d = random(10, 20);
+    this.d = random(5, 15);
 
     this.dx = random(-1, 1);
     this.dy = random(-2, 2);
+    this.c = color(random(255), random(255), random(255));
   }
   draw() {
     noStroke();
-    fill(134, 192, 190);
+    fill(this.c);
     circle(this.x, this.y, this.d);
   }
   update() {
